@@ -2,10 +2,11 @@
     "name": "sqllogictest",
     "displayName": "Sqllogictest",
     "description": "Sqllogictest support for Visual Studio Code",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": "MIT",
     "publisher": "benesch",
     "repository": "https://github.com/benesch/vscode-sqllogictest",
+    "icon": "images/logo.png",
     "engines": {
         "vscode": "^1.38.0"
     },
