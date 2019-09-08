@@ -1,0 +1,47 @@
+{
+    "name": "sqllogictest",
+    "displayName": "Sqllogictest",
+    "description": "Sqllogictest support for Visual Studio Code",
+    "version": "0.1.0",
+    "license": "MIT",
+    "publisher": "benesch",
+    "repository": "https://github.com/benesch/vscode-sqllogictest",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./out/extension.js",
+    "activationEvents": ["*"],
+    "contributes": {
+        "languages": [{
+            "id": "sqllogictest",
+            "aliases": ["Sqllogictest", "sqllogictest"],
+            "extensions": [".slt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sqllogictest",
+            "scopeName": "source.sqllogictest",
+            "path": "./syntaxes/sqllogictest.tmLanguage.json"
+        }]
+    },
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.38.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.2"
+	}
+}
